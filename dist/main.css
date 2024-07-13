@@ -1,0 +1,63 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  /* height: 100%; - if attribution don't want to stick to bottom */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  /* min-height: 100%; - if attribution don't want to stick to bottom  */
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 16px;
+  /* //position: relative; ///for footer with absolute position --> */
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+textarea,
+input {
+  outline: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  margin: auto;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=main.css.map */
