@@ -194,11 +194,11 @@ ul {
   color: hsl(14, 86%, 42%);
 }
 .yourCart .emptyCartImg {
-  display: none;
+  display: block;
   margin: 40px auto 15px;
 }
 .yourCart .emptyCartText {
-  display: none;
+  display: block;
   text-align: center;
   font-size: 14px;
   font-weight: 600;
@@ -231,7 +231,7 @@ ul {
   font-weight: 600;
   color: hsl(12, 20%, 44%);
 }
-.yourCart .cartItem button {
+.yourCart .cartItem .deleteBtn {
   display: block;
   width: 18px;
   height: 18px;
@@ -245,11 +245,11 @@ ul {
   text-decoration: none;
   background: none;
 }
-.yourCart .cartItem button svg {
-  margin-bottom: 4px;
+.yourCart .cartItem .deleteBtn svg {
+  margin-bottom: 2px;
 }
 .yourCart .orderTotal {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
@@ -263,7 +263,7 @@ ul {
   color: hsl(14, 65%, 9%);
 }
 .yourCart .carbonNeutral {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 50px;
@@ -282,8 +282,8 @@ ul {
 .yourCart .carbonNeutral p span {
   font-weight: 600;
 }
-.yourCart button {
-  display: inline-block;
+.yourCart .confirmOrderButton {
+  display: none;
   padding: 0;
   border: none;
   height: 50px;

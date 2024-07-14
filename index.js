@@ -22,6 +22,10 @@ fetch("./data.json")
     const plusButtons = document.querySelectorAll(".plusButton");
     const minusButtons = document.querySelectorAll(".minusButton");
     let deleteBtns; ///create dom link when add new elements
+    const confirmOrderBtn = document.querySelector(".confirmOrderButton");
+    const emptyCartImg = document.querySelector(".emptyCartImg");
+    const emptyCartText = document.querySelector(".emptyCartText");
+    const carbonNeutral = document.querySelector(".carbonNeutral");
 
     const rerender = () => {
       cartItems.innerHTML = "";
@@ -45,6 +49,14 @@ fetch("./data.json")
           totalPrice.innerText = order.orderTotal.toFixed(2);
           chosenButton.classList.remove("chosen");
           chosenButton.children[1].children[1].innerText = 1;
+          if (cartContent.length === 0) {
+            console.log("empty");
+            emptyCartImg.style.display = "block";
+            emptyCartText.style.display = "block";
+            totalPrice.style.display = "none";
+            carbonNeutral.style.display = "none";
+            confirmOrderBtn.style.display = "none";
+          }
         });
       });
     };
@@ -52,6 +64,14 @@ fetch("./data.json")
     addToCartButtons.forEach((button) => {
       button.addEventListener("click", () => {
         button.classList.add("chosen");
+        if (cartContent.length === 0) {
+          console.log("full");
+          emptyCartImg.style.display = "none";
+          emptyCartText.style.display = "none";
+          totalPrice.style.display = "flex";
+          carbonNeutral.style.display = "flex";
+          confirmOrderBtn.style.display = "inline-block";
+        }
         let { quantity, item } = getCardContent(button);
         let { image, category, price } = data.find((el) => el.name === item);
 

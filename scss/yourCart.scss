@@ -9,11 +9,11 @@
     color: hsl(14, 86%, 42%);
   }
   .emptyCartImg {
-    display: none;
+    display: block;
     margin: 40px auto 15px;
   }
   .emptyCartText {
-    display: none;
+    display: block;
     text-align: center;
     font-size: 14px;
     font-weight: 600;
@@ -45,12 +45,13 @@
       font-weight: 600;
       color: hsl(12, 20%, 44%);
     }
-    button {
+    .deleteBtn {
       display: block;
       width: 18px;
       height: 18px;
       border-radius: 50%;
       padding: 0;
+
       border: 2px solid hsl(14, 25%, 72%);
       outline: inherit;
       cursor: pointer;
@@ -60,12 +61,13 @@
       background: none;
       svg {
         // height: 5px;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
       }
     }
   }
   .orderTotal {
-    display: flex;
+    display: none;
+    // display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
@@ -81,7 +83,8 @@
     }
   }
   .carbonNeutral {
-    display: flex;
+    display: none;
+    // display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
@@ -100,8 +103,9 @@
       }
     }
   }
-  button {
-    display: inline-block;
+  .confirmOrderButton {
+    display: none;
+    // display: inline-block;
     padding: 0;
     border: none;
     height: 50px;
