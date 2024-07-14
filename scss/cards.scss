@@ -1,0 +1,187 @@
+.cardsSection {
+  h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 800px;
+    .card {
+      width: 250px;
+      margin-bottom: 30px;
+      .imgDiv {
+        position: relative;
+        height: 240px;
+        margin-bottom: 40px;
+        border-radius: 8px;
+        .cardImg {
+          width: 100%;
+          border-radius: 8px;
+        }
+        .addToCartButton {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          bottom: -20px;
+          left: 45px;
+          width: 160px;
+          height: 44px;
+          border-radius: 44px;
+          padding: 0;
+          border: 1px solid hsl(12, 20%, 44%);
+          outline: inherit;
+          cursor: pointer;
+          font-family: inherit;
+          font-size: 14px;
+          font-weight: 600;
+          text-align: center;
+          text-decoration: none;
+          background-color: white;
+          transition: all 0.13s ease-in-out;
+          img {
+            height: 20px;
+            margin-right: 7px;
+          }
+          p {
+            height: 20px;
+          }
+          //   &:before {
+          //     position: absolute;
+          //     left: 20px;
+          //     content: url(/assets/images/icon-add-to-cart.svg);
+          //   }
+          .defineQuantity {
+            display: none;
+          }
+          &:hover {
+            border: 1px solid hsl(14, 86%, 42%);
+            color: hsl(14, 86%, 42%);
+          }
+        }
+        .chosen {
+          padding: 0 10px;
+          background-color: hsl(14, 86%, 42%);
+          border: 1px solid hsl(14, 86%, 42%);
+          color: white;
+
+          img {
+            display: none;
+          }
+          .buttonText {
+            display: none;
+          }
+          .defineQuantity {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            transition: none;
+            button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 18px;
+              height: 18px;
+              padding: 0;
+              border: 1px solid white;
+              border-radius: 50%;
+              outline: inherit;
+              cursor: pointer;
+              font-family: inherit;
+              text-align: center;
+              text-decoration: none;
+              text-transform: uppercase;
+              background: none;
+              svg {
+                path {
+                  fill: #fff;
+                }
+              }
+              &:hover {
+                background-color: white;
+                svg {
+                  path {
+                    fill: hsl(14, 86%, 42%);
+                  }
+                }
+              }
+            }
+          }
+          &:hover {
+            color: white; ///neutralize hover of button
+          }
+        }
+      }
+      .desertType {
+        font-size: 14px;
+        color: hsl(12, 10%, 44%); //custom
+      }
+      h2 {
+        margin-bottom: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        color: hsl(14, 65%, 9%);
+      }
+      .price {
+        font-weight: 600;
+        color: hsl(14, 86%, 42%);
+      }
+      //   &:nth-child(1) {
+      //     .imgDiv {
+      //       background: center / contain
+      //         url(/assets/images/image-waffle-desktop.jpg);
+      //     }
+      //   }
+      //   &:nth-child(2) {
+      //     .imgDiv {
+      //       background: center / contain
+      //         url(/assets/images/image-creme-brulee-desktop.jpg);
+      //     }
+      //   }
+      //   &:nth-child(3) {
+      //     .imgDiv {
+      //       background: center / contain
+      //         url(/assets/images/image-macaron-desktop.jpg);
+      //     }
+      //   }
+      //   &:nth-child(4) {
+      //     .imgDiv {
+      //       background: center / contain
+      //         url(/assets/images/image-tiramisu-desktop.jpg);
+      //     }
+      //   }
+      //   &:nth-child(5) {
+      //     .imgDiv {
+      //       background: center / contain
+      //         url(/assets/images/image-baklava-desktop.jpg);
+      //     }
+      //   }
+      //   &:nth-child(6) {
+      //     .imgDiv {
+      //       background: center / contain
+      //         url(/assets/images/image-meringue-desktop.jpg);
+      //     }
+      //   }
+      //   &:nth-child(7) {
+      //     .imgDiv {
+      //       background: center / contain
+      //         url(/assets/images/image-cake-desktop.jpg);
+      //     }
+      //   }
+      //   &:nth-child(8) {
+      //     .imgDiv {
+      //       background: center / contain
+      //         url(/assets/images/image-brownie-desktop.jpg);
+      //     }
+      //   }
+      //   &:nth-child(9) {
+      //     .imgDiv {
+      //       background: center / contain
+      //         url(/assets/images/image-panna-cotta-desktop.jpg);
+      //     }
+      //   }
+    }
+  }
+}

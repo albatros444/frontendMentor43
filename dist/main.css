@@ -16,7 +16,7 @@ body {
   padding: 0;
   font-family: "Red Hat Text", sans-serif;
   font-size: 16px;
-  /* //position: relative; ///for footer with absolute position --> */
+  position: relative;
 }
 body h1,
 body h2,
@@ -58,6 +58,254 @@ ul {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.cardsSection h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+.cardsSection .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 800px;
+}
+.cardsSection .cards .card {
+  width: 250px;
+  margin-bottom: 30px;
+}
+.cardsSection .cards .card .imgDiv {
+  position: relative;
+  height: 240px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+.cardsSection .cards .card .imgDiv .cardImg {
+  width: 100%;
+  border-radius: 8px;
+}
+.cardsSection .cards .card .imgDiv .addToCartButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -20px;
+  left: 45px;
+  width: 160px;
+  height: 44px;
+  border-radius: 44px;
+  padding: 0;
+  border: 1px solid hsl(12, 20%, 44%);
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  transition: all 0.13s ease-in-out;
+}
+.cardsSection .cards .card .imgDiv .addToCartButton img {
+  height: 20px;
+  margin-right: 7px;
+}
+.cardsSection .cards .card .imgDiv .addToCartButton p {
+  height: 20px;
+}
+.cardsSection .cards .card .imgDiv .addToCartButton .defineQuantity {
+  display: none;
+}
+.cardsSection .cards .card .imgDiv .addToCartButton:hover {
+  border: 1px solid hsl(14, 86%, 42%);
+  color: hsl(14, 86%, 42%);
+}
+.cardsSection .cards .card .imgDiv .chosen {
+  padding: 0 10px;
+  background-color: hsl(14, 86%, 42%);
+  border: 1px solid hsl(14, 86%, 42%);
+  color: white;
+}
+.cardsSection .cards .card .imgDiv .chosen img {
+  display: none;
+}
+.cardsSection .cards .card .imgDiv .chosen .buttonText {
+  display: none;
+}
+.cardsSection .cards .card .imgDiv .chosen .defineQuantity {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transition: none;
+}
+.cardsSection .cards .card .imgDiv .chosen .defineQuantity button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid white;
+  border-radius: 50%;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: none;
+}
+.cardsSection .cards .card .imgDiv .chosen .defineQuantity button svg path {
+  fill: #fff;
+}
+.cardsSection .cards .card .imgDiv .chosen .defineQuantity button:hover {
+  background-color: white;
+}
+.cardsSection .cards .card .imgDiv .chosen .defineQuantity button:hover svg path {
+  fill: hsl(14, 86%, 42%);
+}
+.cardsSection .cards .card .imgDiv .chosen:hover {
+  color: white;
+}
+.cardsSection .cards .card .desertType {
+  font-size: 14px;
+  color: hsl(12, 10%, 44%);
+}
+.cardsSection .cards .card h2 {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(14, 65%, 9%);
+}
+.cardsSection .cards .card .price {
+  font-weight: 600;
+  color: hsl(14, 86%, 42%);
+}
+
+.yourCart {
+  height: auto;
+  width: 385px;
+  padding: 26px;
+  border-radius: 10px;
+  background-color: white;
+}
+.yourCart h2 {
+  margin-bottom: 25px;
+  color: hsl(14, 86%, 42%);
+}
+.yourCart .emptyCartImg {
+  display: none;
+  margin: 40px auto 15px;
+}
+.yourCart .emptyCartText {
+  display: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: hsl(12, 20%, 44%);
+}
+.yourCart .cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding-bottom: 15px;
+  margin: 20px 0;
+  border-bottom: 1px solid hsl(13, 31%, 94%);
+}
+.yourCart .cartItem__name {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: hsl(14, 65%, 9%);
+}
+.yourCart .cartItem__quantity {
+  margin-right: 15px;
+  font-weight: 600;
+  color: hsl(14, 86%, 42%);
+}
+.yourCart .cartItem__price {
+  margin-right: 10px;
+  color: hsl(12, 20%, 44%);
+}
+.yourCart .cartItem__totalPrice {
+  font-weight: 600;
+  color: hsl(12, 20%, 44%);
+}
+.yourCart .cartItem button {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  padding: 0;
+  border: 2px solid hsl(14, 25%, 72%);
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  background: none;
+}
+.yourCart .cartItem button svg {
+  margin-bottom: 4px;
+}
+.yourCart .orderTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.yourCart .orderTotal p:nth-child(1) {
+  font-size: 14px;
+}
+.yourCart .orderTotal p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(14, 65%, 9%);
+}
+.yourCart .carbonNeutral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  background-color: hsl(20, 50%, 98%);
+}
+.yourCart .carbonNeutral img {
+  height: 20px;
+  margin-right: 10px;
+}
+.yourCart .carbonNeutral p {
+  font-size: 14px;
+  color: hsl(14, 65%, 9%);
+}
+.yourCart .carbonNeutral p span {
+  font-weight: 600;
+}
+.yourCart button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  height: 50px;
+  width: 100%;
+  border-radius: 50px;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background-color: hsl(14, 86%, 42%);
+  color: white;
+}
+
+.background {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 90px 110px;
+  background-color: hsl(20, 50%, 98%);
 }
 
 /*# sourceMappingURL=main.css.map */

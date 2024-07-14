@@ -1,0 +1,120 @@
+.yourCart {
+  height: auto;
+  width: 385px;
+  padding: 26px;
+  border-radius: 10px;
+  background-color: white;
+  h2 {
+    margin-bottom: 25px;
+    color: hsl(14, 86%, 42%);
+  }
+  .emptyCartImg {
+    display: none;
+    margin: 40px auto 15px;
+  }
+  .emptyCartText {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(12, 20%, 44%);
+  }
+  .cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding-bottom: 15px;
+    margin: 20px 0;
+    border-bottom: 1px solid hsl(13, 31%, 94%);
+    &__name {
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: hsl(14, 65%, 9%);
+    }
+    &__quantity {
+      margin-right: 15px;
+      font-weight: 600;
+      color: hsl(14, 86%, 42%);
+    }
+    &__price {
+      margin-right: 10px;
+      color: hsl(12, 20%, 44%);
+    }
+    &__totalPrice {
+      font-weight: 600;
+      color: hsl(12, 20%, 44%);
+    }
+    button {
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      padding: 0;
+      border: 2px solid hsl(14, 25%, 72%);
+      outline: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: center;
+      text-decoration: none;
+      background: none;
+      svg {
+        // height: 5px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+  .orderTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    p {
+      &:nth-child(1) {
+        font-size: 14px;
+      }
+      &:nth-child(2) {
+        font-size: 24px;
+        font-weight: 700;
+        color: hsl(14, 65%, 9%);
+      }
+    }
+  }
+  .carbonNeutral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    background-color: hsl(20, 50%, 98%);
+    img {
+      height: 20px;
+      margin-right: 10px;
+    }
+    p {
+      font-size: 14px;
+      color: hsl(14, 65%, 9%);
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+  button {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    height: 50px;
+    width: 100%;
+    border-radius: 50px;
+    outline: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    background-color: hsl(14, 86%, 42%);
+    color: white;
+  }
+}
