@@ -17,6 +17,8 @@
   background-color: hsl(0, 0%, 0%, 50%);
   .modal {
     width: 590px;
+    max-height: calc(100% - 40px);
+    min-height: 450px;
     padding: 40px;
     border-radius: 8px;
     background-color: white;
@@ -32,6 +34,8 @@
       color: hsl(12, 20%, 44%);
     }
     .orderItems {
+      overflow: auto;
+      max-height: calc(50vh - 125px);
       padding: 25px;
       margin-bottom: 35px;
       border-radius: 8px;

@@ -60,6 +60,9 @@ ul {
   color: hsl(228, 45%, 44%);
 }
 
+.cardsSection {
+  margin-right: 30px;
+}
 .cardsSection h1 {
   font-size: 40px;
   margin-bottom: 25px;
@@ -319,6 +322,8 @@ ul {
 }
 .confirmedModal .modal {
   width: 590px;
+  max-height: calc(100% - 40px);
+  min-height: 450px;
   padding: 40px;
   border-radius: 8px;
   background-color: white;
@@ -335,6 +340,8 @@ ul {
   color: hsl(12, 20%, 44%);
 }
 .confirmedModal .modal .orderItems {
+  overflow: auto;
+  max-height: calc(50vh - 125px);
   padding: 25px;
   margin-bottom: 35px;
   border-radius: 8px;
