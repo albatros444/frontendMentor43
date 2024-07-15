@@ -1,7 +1,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
-  /* height: 100%; - if attribution don't want to stick to bottom */
+  height: 100%; //- if attribution don't want to stick to bottom
 }
 *,
 *::before,
@@ -9,7 +9,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  /* min-height: 100%; - if attribution don't want to stick to bottom  */
+  min-height: 100%; //- if attribution don't want to stick to bottom  */
   margin: 0;
   padding: 0;
   h1,

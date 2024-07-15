@@ -1,0 +1,102 @@
+.body-modal-open {
+  height: 100vh;
+  overflow: hidden;
+}
+.confirmedModal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 0%, 50%);
+  .modal {
+    width: 590px;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: white;
+    img {
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-size: 40px;
+      margin-bottom: 6px;
+    }
+    .modalText {
+      margin-bottom: 30px;
+      color: hsl(12, 20%, 44%);
+    }
+    .orderItems {
+      padding: 25px;
+      margin-bottom: 35px;
+      border-radius: 8px;
+      background-color: hsl(20, 50%, 98%);
+      .items {
+        .item {
+          display: flex;
+          justify-content: space-between;
+          &__left {
+            display: flex;
+            img {
+              height: 46px;
+              border-radius: 5px;
+              margin-right: 15px;
+            }
+            .box {
+              font-size: 14px;
+              .name {
+                margin-bottom: 7px;
+                font-weight: 600;
+                color: hsl(14, 65%, 9%);
+              }
+              .quantity {
+                margin-right: 15px;
+                font-weight: 600;
+                color: hsl(14, 86%, 42%);
+              }
+              .price {
+                color: hsl(14, 25%, 72%);
+              }
+            }
+          }
+        }
+      }
+      .orderTotal {
+        display: flex;
+        justify-content: space-between;
+        p {
+          color: hsl(14, 65%, 9%);
+          &:nth-child(1) {
+            font-size: 14px;
+          }
+          &:nth-child(2) {
+            font-size: 23px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    button {
+      display: block;
+      width: 100%;
+      height: 50px;
+      padding: 0;
+      border: none;
+      border-radius: 50px;
+      outline: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      background-color: hsl(14, 86%, 42%);
+      color: white;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import newCard from "./jsComponents/newCard.js";
 import cartItem from "./jsComponents/cartItem.js";
+import orderItem from "./jsComponents/orderItem.js";
 import { getCardContent, handleTotal } from "./jsComponents/utils.js";
 let data;
 let cartContent = [];
@@ -15,6 +16,7 @@ fetch("./data.json")
     data.forEach((item) => {
       cards.appendChild(newCard(item));
     });
+    const body = document.querySelector("body");
     const cartCounter = document.querySelector(".cartCounter");
     const totalPrice = document.querySelector(".totalPrice");
     const cartItems = document.querySelector(".cartItems");
@@ -26,7 +28,13 @@ fetch("./data.json")
     const emptyCartImg = document.querySelector(".emptyCartImg");
     const emptyCartText = document.querySelector(".emptyCartText");
     const carbonNeutral = document.querySelector(".carbonNeutral");
+    const orderItems = document.querySelector(".items"); ///box in order items to separate from total
+    const confirmedModal = document.querySelector(".confirmedModal");
+    const totalOrderPrice = document.querySelector(".totalOrderPrice");
+    const startNewOrderBtn = document.querySelector(".startNewOrderBtn");
+    const allquantities = document.querySelectorAll(".quantity");
 
+    ////functions/////////
     const rerender = () => {
       cartItems.innerHTML = "";
       cartContent.forEach((item) => {
@@ -59,13 +67,39 @@ fetch("./data.json")
           }
         });
       });
+      console.log(cartContent);
     };
+
+    const closeModal = () => {
+      cartContent = [];
+      rerender();
+      order.cartCounter = 0;
+      order.orderTotal = 0;
+      cartCounter.innerText = order.cartCounter;
+      totalPrice.innerText = order.orderTotal;
+      orderItems.innerText = "";
+      allquantities.forEach((q) => {
+        q.innerText = 1;
+      });
+      console.log(cartContent, order);
+      ///styles
+      body.classList.remove("body-modal-open");
+      confirmedModal.style.display = "none";
+      emptyCartImg.style.display = "block";
+      emptyCartText.style.display = "block";
+      totalPrice.style.display = "none";
+      carbonNeutral.style.display = "none";
+      confirmOrderBtn.style.display = "none";
+      addToCartButtons.forEach((btn) => {
+        btn.classList.remove("chosen");
+      });
+    };
+
     ///card buttons//////////
     addToCartButtons.forEach((button) => {
       button.addEventListener("click", () => {
         button.classList.add("chosen");
         if (cartContent.length === 0) {
-          console.log("full");
           emptyCartImg.style.display = "none";
           emptyCartText.style.display = "none";
           totalPrice.style.display = "flex";
@@ -119,5 +153,19 @@ fetch("./data.json")
 
         // console.log(cartContent);
       });
+    });
+    confirmOrderBtn.addEventListener("click", () => {
+      body.classList.add("body-modal-open");
+      confirmedModal.style.display = "flex";
+      cartContent.forEach((item) => {
+        orderItems.appendChild(orderItem(item));
+        totalOrderPrice.innerText = order.orderTotal.toFixed(2);
+      });
+    });
+    startNewOrderBtn.addEventListener("click", () => {
+      closeModal();
+    });
+    confirmedModal.addEventListener("click", () => {
+      closeModal();
     });
   });

@@ -1,7 +1,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
-  /* height: 100%; - if attribution don't want to stick to bottom */
+  height: 100%;
 }
 
 *,
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  /* min-height: 100%; - if attribution don't want to stick to bottom  */
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Red Hat Text", sans-serif;
@@ -48,7 +48,7 @@ ul {
 }
 
 .attribution {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   bottom: 5px;
@@ -288,6 +288,106 @@ ul {
   border: none;
   height: 50px;
   width: 100%;
+  border-radius: 50px;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background-color: hsl(14, 86%, 42%);
+  color: white;
+}
+
+.body-modal-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.confirmedModal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+.confirmedModal .modal {
+  width: 590px;
+  padding: 40px;
+  border-radius: 8px;
+  background-color: white;
+}
+.confirmedModal .modal img {
+  margin-bottom: 30px;
+}
+.confirmedModal .modal h2 {
+  font-size: 40px;
+  margin-bottom: 6px;
+}
+.confirmedModal .modal .modalText {
+  margin-bottom: 30px;
+  color: hsl(12, 20%, 44%);
+}
+.confirmedModal .modal .orderItems {
+  padding: 25px;
+  margin-bottom: 35px;
+  border-radius: 8px;
+  background-color: hsl(20, 50%, 98%);
+}
+.confirmedModal .modal .orderItems .items .item {
+  display: flex;
+  justify-content: space-between;
+}
+.confirmedModal .modal .orderItems .items .item__left {
+  display: flex;
+}
+.confirmedModal .modal .orderItems .items .item__left img {
+  height: 46px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+.confirmedModal .modal .orderItems .items .item__left .box {
+  font-size: 14px;
+}
+.confirmedModal .modal .orderItems .items .item__left .box .name {
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: hsl(14, 65%, 9%);
+}
+.confirmedModal .modal .orderItems .items .item__left .box .quantity {
+  margin-right: 15px;
+  font-weight: 600;
+  color: hsl(14, 86%, 42%);
+}
+.confirmedModal .modal .orderItems .items .item__left .box .price {
+  color: hsl(14, 25%, 72%);
+}
+.confirmedModal .modal .orderItems .orderTotal {
+  display: flex;
+  justify-content: space-between;
+}
+.confirmedModal .modal .orderItems .orderTotal p {
+  color: hsl(14, 65%, 9%);
+}
+.confirmedModal .modal .orderItems .orderTotal p:nth-child(1) {
+  font-size: 14px;
+}
+.confirmedModal .modal .orderItems .orderTotal p:nth-child(2) {
+  font-size: 23px;
+  font-weight: 700;
+}
+.confirmedModal .modal button {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  border: none;
   border-radius: 50px;
   outline: inherit;
   cursor: pointer;
