@@ -4,12 +4,15 @@ export default function newCard(item, layout) {
   const createCard = document.createElement("div");
   createCard.classList.add("card");
   const itemHTML = `  
-            <div class="imgDiv">
+      <div class="imgDiv">
+          <picture>
+            <source media="(max-width: 900px)" srcset=${image.mobile}>
             <img   
             class="cardImg"
-            src=${image[layout]}
+            src=${image.desktop}
             alt=""
-          />
+            />
+          </picture>
               <div class="addToCartButton">
                 <p class="buttonText">Add to cart</p>
                 <div class="defineQuantity">

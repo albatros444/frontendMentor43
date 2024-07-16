@@ -17,10 +17,4 @@ const handleTotal = (sign, price, order, cartCounter, totalPrice) => {
   }
 };
 
-const getLayout = () => {
-  let screenWidth = document.querySelector("body").clientWidth;
-  if (screenWidth <= 900) return "mobile";
-  if (screenWidth > 900) return "desktop";
-};
-
-export { getCardContent, handleTotal, getLayout };
+export { getCardContent, handleTotal };
