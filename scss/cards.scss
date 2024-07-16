@@ -1,17 +1,16 @@
 .cardsSection {
-  margin-right: 30px;
   h1 {
     font-size: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
   .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    // width: 800px;
+    justify-content: left;
     .card {
-      width: 250px;
-      margin-bottom: 30px;
+      width: 252px;
+      margin-bottom: 32px;
+      margin-right: 23px;
       .imgDiv {
         position: relative;
         height: 240px;
@@ -26,7 +25,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          bottom: -20px;
+          bottom: -22px;
           left: 0;
           right: 0;
           margin: 0 auto;
@@ -34,7 +33,7 @@
           height: 44px;
           border-radius: 44px;
           padding: 0;
-          border: 1px solid hsl(12, 20%, 44%);
+          border: 1px solid hsl(7, 20%, 60%);
           outline: inherit;
           cursor: pointer;
           font-family: inherit;
@@ -44,12 +43,15 @@
           text-decoration: none;
           background-color: white;
           transition: all 0.13s ease-in-out;
-          p {
+          .buttonText {
+            padding-top: 1px;
+            padding-left: 30px;
             height: 20px;
           }
           &:before {
             position: absolute;
-            left: 20px;
+            top: 11px;
+            left: 27px;
             content: url(/assets/images/icon-add-to-cart.svg);
           }
           .defineQuantity {
@@ -117,11 +119,12 @@
         }
       }
       .desertType {
+        margin-bottom: 4px;
         font-size: 14px;
         color: hsl(12, 10%, 44%); //custom
       }
       h2 {
-        margin-bottom: 5px;
+        margin-bottom: 4px;
         font-size: 16px;
         font-weight: 500;
         color: hsl(14, 65%, 9%);

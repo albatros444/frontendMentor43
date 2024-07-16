@@ -6,7 +6,7 @@ const cartItem = ({ name, quantity, price }) => {
               <p class="cartItem__name">${name}</p>
               <p>
                 <span class="cartItem__quantity">${quantity}x</span
-                ><span class="cartItem__price">@$${price.toFixed(2)}</span
+                ><span class="cartItem__price">@ $${price.toFixed(2)}</span
                 ><span class="cartItem__totalPrice">$${(
                   price * quantity
                 ).toFixed(2)}</span>

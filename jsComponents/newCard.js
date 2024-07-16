@@ -14,7 +14,7 @@ export default function newCard(item, layout) {
             />
           </picture>
               <div class="addToCartButton">
-                <p class="buttonText">Add to cart</p>
+                <p class="buttonText">Add to Cart</p>
                 <div class="defineQuantity">
                   <button class="minusButton">
                     <svg

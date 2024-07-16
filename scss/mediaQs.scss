@@ -23,13 +23,13 @@
     }
 
     .confirmedModal {
-      // height: 100%;
-      display: block;
+      display: none;
       align-items: start;
       padding-top: 93px;
       overflow: scroll;
       .modal {
         height: auto;
+        width: 100%;
         max-height: none;
         min-height: auto;
         margin-top: 0;
@@ -44,6 +44,9 @@
           margin-bottom: 0;
         }
       }
+    }
+    .active {
+      display: block;
     }
   }
 }

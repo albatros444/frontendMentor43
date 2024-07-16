@@ -55,26 +55,25 @@ ul {
   margin: auto;
   font-size: 11px;
   text-align: center;
+  background-color: hsl(20, 50%, 98%);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
-.cardsSection {
-  margin-right: 30px;
-}
 .cardsSection h1 {
   font-size: 40px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .cardsSection .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: left;
 }
 .cardsSection .cards .card {
-  width: 250px;
-  margin-bottom: 30px;
+  width: 252px;
+  margin-bottom: 32px;
+  margin-right: 23px;
 }
 .cardsSection .cards .card .imgDiv {
   position: relative;
@@ -91,7 +90,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: -20px;
+  bottom: -22px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -99,7 +98,7 @@ ul {
   height: 44px;
   border-radius: 44px;
   padding: 0;
-  border: 1px solid hsl(12, 20%, 44%);
+  border: 1px solid hsl(7, 20%, 60%);
   outline: inherit;
   cursor: pointer;
   font-family: inherit;
@@ -110,12 +109,15 @@ ul {
   background-color: white;
   transition: all 0.13s ease-in-out;
 }
-.cardsSection .cards .card .imgDiv .addToCartButton p {
+.cardsSection .cards .card .imgDiv .addToCartButton .buttonText {
+  padding-top: 1px;
+  padding-left: 30px;
   height: 20px;
 }
 .cardsSection .cards .card .imgDiv .addToCartButton:before {
   position: absolute;
-  left: 20px;
+  top: 11px;
+  left: 27px;
   content: url(/assets/images/icon-add-to-cart.svg);
 }
 .cardsSection .cards .card .imgDiv .addToCartButton .defineQuantity {
@@ -176,11 +178,12 @@ ul {
   color: white;
 }
 .cardsSection .cards .card .desertType {
+  margin-bottom: 4px;
   font-size: 14px;
   color: hsl(12, 10%, 44%);
 }
 .cardsSection .cards .card h2 {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-size: 16px;
   font-weight: 500;
   color: hsl(14, 65%, 9%);
@@ -194,7 +197,7 @@ ul {
   height: auto;
   width: 385px;
   flex-shrink: 0;
-  padding: 26px;
+  padding: 26px 24px;
   border-radius: 10px;
   background-color: white;
 }
@@ -208,6 +211,7 @@ ul {
 }
 .yourCart .emptyCartText {
   display: block;
+  margin-bottom: 15px;
   text-align: center;
   font-size: 14px;
   font-weight: 600;
@@ -218,22 +222,25 @@ ul {
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  padding-bottom: 15px;
-  margin: 20px 0;
+  padding-bottom: 16px;
+  margin: 18px 0;
   border-bottom: 1px solid hsl(13, 31%, 94%);
 }
+.yourCart .cartItem:last-child {
+  padding-bottom: 25px;
+}
 .yourCart .cartItem__name {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 600;
   color: hsl(14, 65%, 9%);
 }
 .yourCart .cartItem__quantity {
-  margin-right: 15px;
+  margin-right: 16px;
   font-weight: 600;
   color: hsl(14, 86%, 42%);
 }
 .yourCart .cartItem__price {
-  margin-right: 10px;
+  margin-right: 8px;
   color: hsl(12, 20%, 44%);
 }
 .yourCart .cartItem__totalPrice {
@@ -261,7 +268,7 @@ ul {
   display: none;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin: 25px 0;
 }
 .yourCart .orderTotal p:nth-child(1) {
   font-size: 14px;
@@ -321,6 +328,7 @@ ul {
   top: 0;
   bottom: 0;
   display: none;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: hsla(0, 0%, 0%, 0.5);
@@ -330,11 +338,11 @@ ul {
   max-height: calc(100% - 40px);
   min-height: 450px;
   padding: 40px;
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: white;
 }
-.confirmedModal .modal img {
-  margin-bottom: 30px;
+.confirmedModal .modal .logo {
+  margin-bottom: 15px;
 }
 .confirmedModal .modal h2 {
   font-size: 40px;
@@ -347,7 +355,7 @@ ul {
 .confirmedModal .modal .orderItems {
   overflow: auto;
   max-height: calc(50vh - 125px);
-  padding: 25px;
+  padding: 10px 25px;
   margin-bottom: 35px;
   border-radius: 8px;
   background-color: hsl(20, 50%, 98%);
@@ -355,6 +363,8 @@ ul {
 .confirmedModal .modal .orderItems .items .item {
   display: flex;
   justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid hsl(13, 31%, 94%);
 }
 .confirmedModal .modal .orderItems .items .item__left {
   display: flex;
@@ -380,18 +390,29 @@ ul {
 .confirmedModal .modal .orderItems .items .item__left .box .price {
   color: hsl(14, 25%, 72%);
 }
+.confirmedModal .modal .orderItems .items .item__right {
+  padding-top: 12px;
+  font-weight: 600;
+  color: hsl(14, 65%, 9%);
+}
+.confirmedModal .modal .orderItems .items .item:last-child {
+  padding-bottom: 25px;
+}
 .confirmedModal .modal .orderItems .orderTotal {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 10px;
 }
 .confirmedModal .modal .orderItems .orderTotal p {
   color: hsl(14, 65%, 9%);
 }
 .confirmedModal .modal .orderItems .orderTotal p:nth-child(1) {
+  padding-bottom: 3px;
   font-size: 14px;
 }
 .confirmedModal .modal .orderItems .orderTotal p:nth-child(2) {
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 700;
 }
 .confirmedModal .modal button {
@@ -399,7 +420,6 @@ ul {
   width: 100%;
   height: 50px;
   padding: 0;
-  margin-bottom: 25px;
   border: none;
   border-radius: 50px;
   outline: inherit;
@@ -413,12 +433,16 @@ ul {
   color: white;
 }
 
+.active {
+  display: flex;
+}
+
 .background {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 90px 110px;
+  padding: 84px 110px 40px;
   background-color: hsl(20, 50%, 98%);
 }
 
@@ -446,13 +470,14 @@ ul {
     width: 100%;
   }
   .background .confirmedModal {
-    display: block;
+    display: none;
     align-items: start;
     padding-top: 93px;
     overflow: scroll;
   }
   .background .confirmedModal .modal {
     height: auto;
+    width: 100%;
     max-height: none;
     min-height: auto;
     margin-top: 0;
@@ -465,6 +490,9 @@ ul {
   }
   .background .confirmedModal .modal button {
     margin-bottom: 0;
+  }
+  .background .active {
+    display: block;
   }
 }
 

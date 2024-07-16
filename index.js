@@ -87,9 +87,9 @@ fetch("./data.json")
       console.log(cartContent, order);
       ///styles
       body.classList.remove("body-modal-open");
-      confirmedModal.style.display = "none";
       emptyCartImg.style.display = "block";
       emptyCartText.style.display = "block";
+      confirmedModal.classList.remove("active");
       orderTotal.style.display = "none";
       carbonNeutral.style.display = "none";
       confirmOrderBtn.style.display = "none";
@@ -159,7 +159,7 @@ fetch("./data.json")
     });
     confirmOrderBtn.addEventListener("click", () => {
       body.classList.add("body-modal-open");
-      confirmedModal.style.display = "flex";
+      confirmedModal.classList.add("active");
       window.scroll(0, 0);
       cartContent.forEach((item) => {
         orderItems.appendChild(orderItem(item));
