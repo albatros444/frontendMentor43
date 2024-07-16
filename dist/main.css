@@ -92,7 +92,9 @@ ul {
   justify-content: center;
   align-items: center;
   bottom: -20px;
-  left: 45px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 160px;
   height: 44px;
   border-radius: 44px;
@@ -108,12 +110,13 @@ ul {
   background-color: white;
   transition: all 0.13s ease-in-out;
 }
-.cardsSection .cards .card .imgDiv .addToCartButton img {
-  height: 20px;
-  margin-right: 7px;
-}
 .cardsSection .cards .card .imgDiv .addToCartButton p {
   height: 20px;
+}
+.cardsSection .cards .card .imgDiv .addToCartButton:before {
+  position: absolute;
+  left: 20px;
+  content: url(/assets/images/icon-add-to-cart.svg);
 }
 .cardsSection .cards .card .imgDiv .addToCartButton .defineQuantity {
   display: none;
@@ -132,6 +135,9 @@ ul {
   display: none;
 }
 .cardsSection .cards .card .imgDiv .chosen .buttonText {
+  display: none;
+}
+.cardsSection .cards .card .imgDiv .chosen:before {
   display: none;
 }
 .cardsSection .cards .card .imgDiv .chosen .defineQuantity {
@@ -393,6 +399,7 @@ ul {
   width: 100%;
   height: 50px;
   padding: 0;
+  margin-bottom: 25px;
   border: none;
   border-radius: 50px;
   outline: inherit;
@@ -407,6 +414,7 @@ ul {
 }
 
 .background {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -415,15 +423,48 @@ ul {
 }
 
 @media screen and (max-width: 900px) {
+  .body-modal-open {
+    height: auto;
+  }
   .background {
     display: block;
     padding: 20px;
+  }
+  .background .cardsSection {
+    margin-right: 0;
   }
   .background .cardsSection .cards {
     display: block;
   }
   .background .cardsSection .cards .card {
     width: 100%;
+  }
+  .background .cardsSection .cards .card .imgDiv {
+    height: auto;
+  }
+  .background .yourCart {
+    width: 100%;
+  }
+  .background .confirmedModal {
+    display: block;
+    align-items: start;
+    padding-top: 93px;
+    overflow: scroll;
+  }
+  .background .confirmedModal .modal {
+    height: auto;
+    max-height: none;
+    min-height: auto;
+    margin-top: 0;
+    padding: 25px;
+    border-radius: 12px 12px 0 0;
+  }
+  .background .confirmedModal .modal .orderItems {
+    max-height: none;
+    overflow: visible;
+  }
+  .background .confirmedModal .modal button {
+    margin-bottom: 0;
   }
 }
 

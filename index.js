@@ -34,6 +34,8 @@ fetch("./data.json")
     const totalOrderPrice = document.querySelector(".totalOrderPrice");
     const startNewOrderBtn = document.querySelector(".startNewOrderBtn");
     const allquantities = document.querySelectorAll(".quantity");
+    const orderTotal = document.querySelector(".orderTotal");
+    const modal = document.querySelector(".modal");
 
     ////functions/////////
     const rerender = () => {
@@ -62,7 +64,7 @@ fetch("./data.json")
             console.log("empty");
             emptyCartImg.style.display = "block";
             emptyCartText.style.display = "block";
-            totalPrice.style.display = "none";
+            orderTotal.style.display = "none";
             carbonNeutral.style.display = "none";
             confirmOrderBtn.style.display = "none";
           }
@@ -88,7 +90,7 @@ fetch("./data.json")
       confirmedModal.style.display = "none";
       emptyCartImg.style.display = "block";
       emptyCartText.style.display = "block";
-      totalPrice.style.display = "none";
+      orderTotal.style.display = "none";
       carbonNeutral.style.display = "none";
       confirmOrderBtn.style.display = "none";
       addToCartButtons.forEach((btn) => {
@@ -103,7 +105,7 @@ fetch("./data.json")
         if (cartContent.length === 0) {
           emptyCartImg.style.display = "none";
           emptyCartText.style.display = "none";
-          totalPrice.style.display = "flex";
+          orderTotal.style.display = "flex";
           carbonNeutral.style.display = "flex";
           confirmOrderBtn.style.display = "inline-block";
         }
@@ -158,6 +160,7 @@ fetch("./data.json")
     confirmOrderBtn.addEventListener("click", () => {
       body.classList.add("body-modal-open");
       confirmedModal.style.display = "flex";
+      window.scroll(0, 0);
       cartContent.forEach((item) => {
         orderItems.appendChild(orderItem(item));
         totalOrderPrice.innerText = order.orderTotal.toFixed(2);
@@ -165,6 +168,9 @@ fetch("./data.json")
     });
     startNewOrderBtn.addEventListener("click", () => {
       closeModal();
+    });
+    modal.addEventListener("click", (e) => {
+      e.stopPropagation();
     });
     confirmedModal.addEventListener("click", () => {
       closeModal();

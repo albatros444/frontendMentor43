@@ -1,12 +1,47 @@
 @media screen and (max-width: 900px) {
+  .body-modal-open {
+    height: auto;
+    // overflow: scroll;
+  }
   .background {
     display: block;
     padding: 20px;
     .cardsSection {
+      margin-right: 0;
       .cards {
         display: block;
         .card {
           width: 100%;
+          .imgDiv {
+            height: auto;
+          }
+        }
+      }
+    }
+    .yourCart {
+      width: 100%;
+    }
+
+    .confirmedModal {
+      // height: 100%;
+      display: block;
+      align-items: start;
+      padding-top: 93px;
+      overflow: scroll;
+      .modal {
+        height: auto;
+        max-height: none;
+        min-height: auto;
+        margin-top: 0;
+        padding: 25px;
+        border-radius: 12px 12px 0 0;
+        // overflow: scroll;
+        .orderItems {
+          max-height: none;
+          overflow: visible;
+        }
+        button {
+          margin-bottom: 0;
         }
       }
     }
