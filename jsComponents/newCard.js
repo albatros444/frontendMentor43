@@ -1,12 +1,13 @@
-export default function newCard(item) {
+export default function newCard(item, layout) {
   let { name, category, price, image } = item;
+
   const createCard = document.createElement("div");
   createCard.classList.add("card");
   const itemHTML = `  
             <div class="imgDiv">
-            <img
+            <img   
             class="cardImg"
-            src=${image.desktop}
+            src=${image[layout]}
             alt=""
           />
               <div class="addToCartButton">

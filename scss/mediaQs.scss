@@ -1,0 +1,14 @@
+@media screen and (max-width: 900px) {
+  .background {
+    display: block;
+    padding: 20px;
+    .cardsSection {
+      .cards {
+        display: block;
+        .card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

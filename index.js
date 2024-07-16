@@ -1,20 +1,29 @@
 import newCard from "./jsComponents/newCard.js";
 import cartItem from "./jsComponents/cartItem.js";
 import orderItem from "./jsComponents/orderItem.js";
-import { getCardContent, handleTotal } from "./jsComponents/utils.js";
+import {
+  getCardContent,
+  handleTotal,
+  getLayout,
+} from "./jsComponents/utils.js";
 let data;
 let cartContent = [];
 let order = {
   cartCounter: 0,
   orderTotal: 0,
 };
+/////screen width////
+let screenWidth;
+let layout = getLayout();
+
+///
 fetch("./data.json")
   .then((resp) => resp.json())
   .then((json) => {
     data = json;
     const cards = document.querySelector(".cards");
     data.forEach((item) => {
-      cards.appendChild(newCard(item));
+      cards.appendChild(newCard(item, layout));
     });
     const body = document.querySelector("body");
     const cartCounter = document.querySelector(".cartCounter");
@@ -33,7 +42,24 @@ fetch("./data.json")
     const totalOrderPrice = document.querySelector(".totalOrderPrice");
     const startNewOrderBtn = document.querySelector(".startNewOrderBtn");
     const allquantities = document.querySelectorAll(".quantity");
+    const cardImages = document.querySelectorAll(".cardImg");
 
+    window.addEventListener("resize", () => {
+      layout = getLayout();
+      // screenWidth = document.querySelector("body").clientWidth;
+      // console.log(screenWidth, layout);
+      if (layout === "desktop") {
+        console.log("rerender");
+        data.forEach((item, i) => {
+          cardImages[i].src = item.image.desktop;
+        });
+      } else if (layout === "mobile") {
+        console.log("rerender");
+        data.forEach((item, i) => {
+          cardImages[i].src = item.image.mobile;
+        });
+      }
+    });
     ////functions/////////
     const rerender = () => {
       cartItems.innerHTML = "";

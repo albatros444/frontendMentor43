@@ -71,7 +71,6 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 800px;
 }
 .cardsSection .cards .card {
   width: 250px;
@@ -188,6 +187,7 @@ ul {
 .yourCart {
   height: auto;
   width: 385px;
+  flex-shrink: 0;
   padding: 26px;
   border-radius: 10px;
   background-color: white;
@@ -317,7 +317,6 @@ ul {
   display: none;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-color: hsla(0, 0%, 0%, 0.5);
 }
 .confirmedModal .modal {
@@ -413,6 +412,19 @@ ul {
   align-items: flex-start;
   padding: 90px 110px;
   background-color: hsl(20, 50%, 98%);
+}
+
+@media screen and (max-width: 900px) {
+  .background {
+    display: block;
+    padding: 20px;
+  }
+  .background .cardsSection .cards {
+    display: block;
+  }
+  .background .cardsSection .cards .card {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
