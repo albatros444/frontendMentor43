@@ -1,19 +1,24 @@
 @media screen and (max-width: 900px) {
   .body-modal-open {
     height: auto;
-    // overflow: scroll;
   }
   .background {
     display: block;
-    padding: 20px;
+    padding: 22px;
     .cardsSection {
       margin-right: 0;
       .cards {
         display: block;
         .card {
           width: 100%;
+          margin-bottom: 25px;
           .imgDiv {
             height: auto;
+            margin-bottom: 35px;
+
+            .addToCartButton {
+              bottom: -18px;
+            }
           }
         }
       }
@@ -35,13 +40,41 @@
         margin-top: 0;
         padding: 25px;
         border-radius: 12px 12px 0 0;
-        // overflow: scroll;
+        .logo {
+          margin: 15px 0 18px;
+        }
+        h2 {
+          line-height: 1.2;
+          margin-bottom: 10px;
+        }
         .orderItems {
           max-height: none;
           overflow: visible;
+          .item {
+            &__left {
+              min-width: 60%;
+              .box {
+                min-width: 60%;
+                overflow: hidden;
+                .name {
+                  min-width: 60%;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+            &__right {
+              // width: 50px;
+            }
+          }
+        }
+        .orderTotal {
+          padding: 25px 0 13px;
         }
         button {
           margin-bottom: 0;
+          height: 52px;
         }
       }
     }

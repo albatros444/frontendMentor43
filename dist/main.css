@@ -350,10 +350,10 @@ ul {
 }
 .confirmedModal .modal .modalText {
   margin-bottom: 30px;
-  color: hsl(12, 20%, 44%);
+  color: hsl(7, 10%, 50%);
 }
 .confirmedModal .modal .orderItems {
-  overflow: auto;
+  overflow-y: auto;
   max-height: calc(50vh - 125px);
   padding: 10px 25px;
   margin-bottom: 35px;
@@ -382,16 +382,17 @@ ul {
   font-weight: 600;
   color: hsl(14, 65%, 9%);
 }
-.confirmedModal .modal .orderItems .items .item__left .box .quantity {
+.confirmedModal .modal .orderItems .items .item__left .box .quantPr .quantity {
   margin-right: 15px;
   font-weight: 600;
   color: hsl(14, 86%, 42%);
 }
-.confirmedModal .modal .orderItems .items .item__left .box .price {
+.confirmedModal .modal .orderItems .items .item__left .box .quantPr .price {
   color: hsl(14, 25%, 72%);
 }
 .confirmedModal .modal .orderItems .items .item__right {
   padding-top: 12px;
+  padding-left: 10px;
   font-weight: 600;
   color: hsl(14, 65%, 9%);
 }
@@ -452,7 +453,7 @@ ul {
   }
   .background {
     display: block;
-    padding: 20px;
+    padding: 22px;
   }
   .background .cardsSection {
     margin-right: 0;
@@ -462,9 +463,14 @@ ul {
   }
   .background .cardsSection .cards .card {
     width: 100%;
+    margin-bottom: 25px;
   }
   .background .cardsSection .cards .card .imgDiv {
     height: auto;
+    margin-bottom: 35px;
+  }
+  .background .cardsSection .cards .card .imgDiv .addToCartButton {
+    bottom: -18px;
   }
   .background .yourCart {
     width: 100%;
@@ -484,12 +490,36 @@ ul {
     padding: 25px;
     border-radius: 12px 12px 0 0;
   }
+  .background .confirmedModal .modal .logo {
+    margin: 15px 0 18px;
+  }
+  .background .confirmedModal .modal h2 {
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
   .background .confirmedModal .modal .orderItems {
     max-height: none;
     overflow: visible;
   }
+  .background .confirmedModal .modal .orderItems .item__left {
+    min-width: 60%;
+  }
+  .background .confirmedModal .modal .orderItems .item__left .box {
+    min-width: 60%;
+    overflow: hidden;
+  }
+  .background .confirmedModal .modal .orderItems .item__left .box .name {
+    min-width: 60%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .background .confirmedModal .modal .orderTotal {
+    padding: 25px 0 13px;
+  }
   .background .confirmedModal .modal button {
     margin-bottom: 0;
+    height: 52px;
   }
   .background .active {
     display: block;

@@ -5,7 +5,7 @@ const orderItem = ({ name, quantity, price, thumbnail }) => {
                 <img src=${thumbnail} alt="" />
                 <div class="box">
                   <p class="name">${name}</p>
-                  <p>
+                  <p class="quantPr>
                     <span class="quantity">${quantity}x</span
                     ><span class="price">@$${price.toFixed(2)}</span>
                   </p>
