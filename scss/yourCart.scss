@@ -2,6 +2,7 @@
   height: auto;
   width: 385px;
   flex-shrink: 0;
+  flex-grow: 0.5;
   padding: 26px 24px;
   border-radius: 10px;
   background-color: white;
@@ -56,7 +57,6 @@
       height: 18px;
       border-radius: 50%;
       padding: 0;
-
       border: 2px solid hsl(14, 25%, 72%);
       outline: inherit;
       cursor: pointer;
@@ -64,9 +64,18 @@
       text-align: center;
       text-decoration: none;
       background: none;
+      transition: all 0.13s ease-in-out;
       svg {
         // height: 5px;
+        fill: #caafa7;
         margin-bottom: 2px;
+        transition: all 0.13s ease-in-out;
+      }
+      &:hover {
+        border: 2px solid hsl(14, 65%, 9%);
+        svg {
+          fill: hsl(14, 65%, 9%);
+        }
       }
     }
   }
@@ -125,5 +134,10 @@
     text-decoration: none;
     background-color: hsl(14, 86%, 42%);
     color: white;
+    transition: all 0.13s ease-in-out;
+
+    &:hover {
+      background-color: hsl(14, 86%, 32%);
+    }
   }
 }

@@ -164,6 +164,7 @@ ul {
   text-decoration: none;
   text-transform: uppercase;
   background: none;
+  transition: all 0.13s ease-in-out;
 }
 .cardsSection .cards .card .imgDiv .chosen .defineQuantity button svg path {
   fill: #fff;
@@ -197,6 +198,7 @@ ul {
   height: auto;
   width: 385px;
   flex-shrink: 0;
+  flex-grow: 0.5;
   padding: 26px 24px;
   border-radius: 10px;
   background-color: white;
@@ -260,9 +262,18 @@ ul {
   text-align: center;
   text-decoration: none;
   background: none;
+  transition: all 0.13s ease-in-out;
 }
 .yourCart .cartItem .deleteBtn svg {
+  fill: #caafa7;
   margin-bottom: 2px;
+  transition: all 0.13s ease-in-out;
+}
+.yourCart .cartItem .deleteBtn:hover {
+  border: 2px solid hsl(14, 65%, 9%);
+}
+.yourCart .cartItem .deleteBtn:hover svg {
+  fill: hsl(14, 65%, 9%);
 }
 .yourCart .orderTotal {
   display: none;
@@ -314,6 +325,10 @@ ul {
   text-decoration: none;
   background-color: hsl(14, 86%, 42%);
   color: white;
+  transition: all 0.13s ease-in-out;
+}
+.yourCart .confirmOrderButton:hover {
+  background-color: hsl(14, 86%, 32%);
 }
 
 .body-modal-open {
@@ -327,7 +342,6 @@ ul {
   right: 0;
   top: 0;
   bottom: 0;
-  display: none;
   display: none;
   justify-content: center;
   align-items: center;
@@ -388,7 +402,7 @@ ul {
   color: hsl(14, 86%, 42%);
 }
 .confirmedModal .modal .orderItems .items .item__left .box .quantPr .price {
-  color: hsl(14, 25%, 72%);
+  color: hsl(12, 20%, 44%);
 }
 .confirmedModal .modal .orderItems .items .item__right {
   padding-top: 12px;
@@ -433,6 +447,9 @@ ul {
   background-color: hsl(14, 86%, 42%);
   color: white;
 }
+.confirmedModal .modal button:hover {
+  background-color: hsl(14, 86%, 32%);
+}
 
 .active {
   display: flex;
@@ -441,29 +458,28 @@ ul {
 .background {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: flex-start;
-  padding: 84px 110px 40px;
+  padding: 5.83vw 7.64vw 40px;
   background-color: hsl(20, 50%, 98%);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 999px) {
   .body-modal-open {
     height: auto;
+    overflow: hidden;
   }
   .background {
     display: block;
-    padding: 22px;
-  }
-  .background .cardsSection {
-    margin-right: 0;
+    padding: 5.86vw;
   }
   .background .cardsSection .cards {
     display: block;
   }
   .background .cardsSection .cards .card {
     width: 100%;
-    margin-bottom: 25px;
+    max-width: 420px;
+    margin: 0 auto 25px;
   }
   .background .cardsSection .cards .card .imgDiv {
     height: auto;
@@ -474,6 +490,7 @@ ul {
   }
   .background .yourCart {
     width: 100%;
+    max-width: 700px;
   }
   .background .confirmedModal {
     display: none;
@@ -485,7 +502,7 @@ ul {
     height: auto;
     width: 100%;
     max-height: none;
-    min-height: auto;
+    min-height: 100%;
     margin-top: 0;
     padding: 25px;
     border-radius: 12px 12px 0 0;
@@ -523,6 +540,78 @@ ul {
   }
   .background .active {
     display: block;
+  }
+}
+@media screen and (min-width: 645px) and (max-width: 999px) {
+  .background .confirmedModal {
+    padding-top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .background .confirmedModal .modal {
+    width: 440px;
+    height: auto;
+    max-height: calc(100% - 40px);
+    min-height: auto;
+    margin: 10% auto;
+    border-radius: 12px;
+  }
+  .background .confirmedModal .modal .orderItems {
+    overflow-y: auto;
+    max-height: calc(50vh - 125px);
+  }
+  .background .active {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1105px) and (max-width: 1441px) {
+  .cards {
+    width: 550px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1755px) {
+  .cards {
+    width: 835px;
+  }
+}
+@media screen and (min-width: 1756px) and (max-width: 2080px) {
+  .cards {
+    width: 1105px;
+  }
+}
+@media screen and (min-width: 2080px) and (max-width: 2220px) {
+  .cards {
+    width: 1380px;
+  }
+}
+@media screen and (min-width: 2080px) {
+  .yourCart {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .background .cardsSection .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .background .cardsSection .cards .card {
+    width: 48%;
+    margin: 0 0 25px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1105px) {
+  .background .cardsSection .cards {
+    width: 465px;
+  }
+  .background .cardsSection .cards .card {
+    width: 400px;
   }
 }
 

@@ -1,17 +1,18 @@
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 999px) {
   .body-modal-open {
     height: auto;
+    overflow: hidden;
   }
   .background {
     display: block;
-    padding: 22px;
+    padding: 5.86vw; //22px;
     .cardsSection {
-      margin-right: 0;
       .cards {
         display: block;
         .card {
           width: 100%;
-          margin-bottom: 25px;
+          max-width: 420px;
+          margin: 0 auto 25px;
           .imgDiv {
             height: auto;
             margin-bottom: 35px;
@@ -25,6 +26,7 @@
     }
     .yourCart {
       width: 100%;
+      max-width: 700px;
     }
 
     .confirmedModal {
@@ -36,7 +38,7 @@
         height: auto;
         width: 100%;
         max-height: none;
-        min-height: auto;
+        min-height: 100%;
         margin-top: 0;
         padding: 25px;
         border-radius: 12px 12px 0 0;
@@ -80,6 +82,36 @@
     }
     .active {
       display: block;
+    }
+  }
+}
+@media screen and (min-width: 645px) and (max-width: 999px) {
+  .background {
+    .confirmedModal {
+      padding-top: 0;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      .modal {
+        width: 440px;
+        height: auto;
+        max-height: calc(100% - 40px);
+        min-height: auto;
+        margin: 10% auto;
+        border-radius: 12px;
+        .orderItems {
+          overflow-y: auto;
+          max-height: calc(50vh - 125px);
+        }
+      }
+    }
+    .active {
+      display: flex;
     }
   }
 }

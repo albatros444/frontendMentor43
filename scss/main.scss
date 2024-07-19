@@ -7,9 +7,9 @@
 .background {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: flex-start;
-  padding: 84px 110px 40px;
+  padding: 5.83vw 7.64vw 40px; //84px 110px
   background-color: hsl(20, 50%, 98%);
 }
 
@@ -23,3 +23,4 @@
 // - Rose 500: hsl(12, 20%, 44%)
 // - Rose 900: hsl(14, 65%, 9%)
 @import "mediaQs";
+@import "mediaQsFlexCards";

@@ -9,7 +9,6 @@
   top: 0;
   bottom: 0;
   display: none;
-  display: none;
   justify-content: center;
   align-items: center;
   background-color: hsl(0, 0%, 0%, 50%);
@@ -65,7 +64,7 @@
                   color: hsl(14, 86%, 42%);
                 }
                 .price {
-                  color: hsl(14, 25%, 72%);
+                  color: hsl(12, 20%, 44%);
                 }
               }
             }
@@ -117,6 +116,9 @@
       text-decoration: none;
       background-color: hsl(14, 86%, 42%);
       color: white;
+      &:hover {
+        background-color: hsl(14, 86%, 32%);
+      }
     }
   }
 }

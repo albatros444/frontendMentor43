@@ -6,7 +6,7 @@ export default function newCard(item, layout) {
   const itemHTML = `  
       <div class="imgDiv">
           <picture>
-            <source media="(max-width: 900px)" srcset=${image.mobile}>
+            <source media="(max-width: 1104px)" srcset=${image.mobile}>
             <img   
             class="cardImg"
             src=${image.desktop}
